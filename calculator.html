@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>재무제표 비교 계산기 | 주린이 재무제표</title>
+<meta name="description" content="두 회사의 매출액, 영업이익 등을 입력하면 영업이익률, ROE, PER 등을 자동으로 계산해 비교해주는 도구입니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="sitebar"><div class="wrap row">
+<a href="index.html" class="brand"><span class="pin"></span>주린이 재무제표</a>
+<nav class="sitenav">
+<a href="glossary.html">용어사전</a>
+<a href="income-statement.html">손익계산서</a>
+<a href="leaders.html">대장주 TOP3</a>
+<a href="compare/semiconductor.html">대장주 비교</a>
+<a href="calculator.html">비교 계산기</a>
+<a href="where-to-check.html">어디서 보나요</a>
+<a href="about.html">소개</a>
+</nav>
+</div></div>
+
+<header class="hero"><div class="wrap">
+<div class="breadcrumb"><a href="index.html">홈</a> / 비교 계산기</div>
+<div class="eyebrow">Calculator</div>
+<h1 class="title">재무제표 <mark>비교 계산기</mark></h1>
+<p class="subtitle">두 회사의 매출액, 영업이익 같은 기본 숫자만 넣으면 영업이익률·ROE·PER 등을 자동으로 계산해서 나란히 보여드려요. 증권 앱이나 DART에서 확인한 숫자를 그대로 입력해보세요.</p>
+<div class="notice"><b>안내</b> · 이 계산기는 입력한 숫자를 기준으로 비율을 계산해줄 뿐, 어느 회사가 더 좋은 투자처인지 판단해주지 않습니다. 계산 결과는 학습 참고용이며 투자 권유가 아닙니다.</div>
+</div></header>
+<main class="wrap wrap-narrow">
+
+<div class="calc-grid">
+  <div class="calc-col">
+    <h3>A 회사</h3>
+    <div class="field"><label>회사 이름</label><input type="text" id="nameA" placeholder="예: 삼성전자"></div>
+    <div class="field"><label>매출액 <span class="unit">(억 원)</span></label><input type="number" id="revA" placeholder="예: 1714995"></div>
+    <div class="field"><label>영업이익 <span class="unit">(억 원)</span></label><input type="number" id="opA" placeholder="예: 894924"></div>
+    <div class="field"><label>당기순이익 <span class="unit">(억 원)</span></label><input type="number" id="niA" placeholder="예: 650000"></div>
+    <div class="field"><label>자본총계 <span class="unit">(억 원, 선택)</span></label><input type="number" id="eqA" placeholder="ROE 계산 시 필요"></div>
+    <div class="field"><label>부채총계 <span class="unit">(억 원, 선택)</span></label><input type="number" id="liA" placeholder="부채비율 계산 시 필요"></div>
+    <div class="field"><label>시가총액 <span class="unit">(억 원, 선택)</span></label><input type="number" id="mcA" placeholder="PER·PBR 계산 시 필요"></div>
+  </div>
+  <div class="calc-col">
+    <h3 class="b-company">B 회사</h3>
+    <div class="field"><label>회사 이름</label><input type="text" id="nameB" placeholder="예: SK하이닉스"></div>
+    <div class="field"><label>매출액 <span class="unit">(억 원)</span></label><input type="number" id="revB" placeholder="예: 793187"></div>
+    <div class="field"><label>영업이익 <span class="unit">(억 원)</span></label><input type="number" id="opB" placeholder="예: 605426"></div>
+    <div class="field"><label>당기순이익 <span class="unit">(억 원)</span></label><input type="number" id="niB" placeholder="예: 550000"></div>
+    <div class="field"><label>자본총계 <span class="unit">(억 원, 선택)</span></label><input type="number" id="eqB" placeholder="ROE 계산 시 필요"></div>
+    <div class="field"><label>부채총계 <span class="unit">(억 원, 선택)</span></label><input type="number" id="liB" placeholder="부채비율 계산 시 필요"></div>
+    <div class="field"><label>시가총액 <span class="unit">(억 원, 선택)</span></label><input type="number" id="mcB" placeholder="PER·PBR 계산 시 필요"></div>
+  </div>
+</div>
+
+<div class="calc-actions"><button class="btn-primary" id="calcBtn">비교 계산하기</button></div>
+
+<div id="calcResults">
+  <div class="article-block">
+    <h2>계산 결과</h2>
+    <table class="compare-table" id="resultTable"></table>
+    <p class="source-note">직접 입력한 값을 기준으로 계산된 결과입니다. 입력값의 정확성은 이용자가 DART·증권사 앱에서 확인해야 합니다.</p>
+  </div>
+</div>
+
+<div class="article-block">
+<h2>계산식이 궁금하다면</h2>
+<ul style="margin-left:18px; color:var(--ink-soft); font-size:13.5px; line-height:1.9;">
+<li>영업이익률 = 영업이익 ÷ 매출액 × 100</li>
+<li>순이익률 = 당기순이익 ÷ 매출액 × 100</li>
+<li>ROE(자기자본이익률) = 당기순이익 ÷ 자본총계 × 100</li>
+<li>부채비율 = 부채총계 ÷ 자본총계 × 100</li>
+<li>PER(시가총액 기준) = 시가총액 ÷ 당기순이익</li>
+<li>PBR(시가총액 기준) = 시가총액 ÷ 자본총계</li>
+</ul>
+<p style="margin-top:10px;">용어 자체가 낯설다면 <a href="glossary.html" style="color:var(--accent); text-decoration:underline;">용어사전</a>을 먼저 보고 오시는 걸 추천해요.</p>
+</div>
+
+</main>
+
+<script>
+function fmt(n, digits){
+  if(!isFinite(n)) return "계산 불가";
+  return n.toLocaleString('ko-KR', {maximumFractionDigits: digits, minimumFractionDigits: 0});
+}
+document.getElementById('calcBtn').addEventListener('click', function(){
+  const g = id => parseFloat(document.getElementById(id).value);
+  const nameA = document.getElementById('nameA').value || 'A 회사';
+  const nameB = document.getElementById('nameB').value || 'B 회사';
+  const revA=g('revA'), opA=g('opA'), niA=g('niA'), eqA=g('eqA'), liA=g('liA'), mcA=g('mcA');
+  const revB=g('revB'), opB=g('opB'), niB=g('niB'), eqB=g('eqB'), liB=g('liB'), mcB=g('mcB');
+
+  const rows = [];
+  const pct = (v)=> isFinite(v) ? fmt(v,1)+'%' : '－';
+  const num = (v)=> isFinite(v) ? fmt(v,0)+'배' : '－';
+
+  if(isFinite(revA) && isFinite(revB)){
+    rows.push(['매출액 (억 원)', isFinite(revA)?fmt(revA,0):'－', isFinite(revB)?fmt(revB,0):'－']);
+  }
+  if(isFinite(opA) || isFinite(opB)){
+    rows.push(['영업이익률', pct(opA/revA*100), pct(opB/revB*100)]);
+  }
+  if(isFinite(niA) || isFinite(niB)){
+    rows.push(['순이익률', pct(niA/revA*100), pct(niB/revB*100)]);
+  }
+  if(isFinite(eqA) || isFinite(eqB)){
+    rows.push(['ROE (자기자본이익률)', pct(niA/eqA*100), pct(niB/eqB*100)]);
+  }
+  if(isFinite(liA) || isFinite(eqA) || isFinite(liB) || isFinite(eqB)){
+    rows.push(['부채비율', pct(liA/eqA*100), pct(liB/eqB*100)]);
+  }
+  if(isFinite(mcA) || isFinite(mcB)){
+    rows.push(['PER (시가총액 기준)', num(mcA/niA), num(mcB/niB)]);
+    rows.push(['PBR (시가총액 기준)', num(mcA/eqA), num(mcB/eqB)]);
+  }
+
+  let html = '<tr><th>지표</th><th>'+nameA+'</th><th>'+nameB+'</th></tr>';
+  if(rows.length===0){
+    html += '<tr><td colspan="3">매출액, 영업이익 등 최소한의 숫자를 입력해주세요.</td></tr>';
+  } else {
+    rows.forEach(r=>{
+      html += '<tr><td>'+r[0]+'</td><td class="num">'+r[1]+'</td><td class="num">'+r[2]+'</td></tr>';
+    });
+  }
+  document.getElementById('resultTable').innerHTML = html;
+  document.getElementById('calcResults').classList.add('show');
+  document.getElementById('calcResults').scrollIntoView({behavior:'smooth', block:'start'});
+});
+</script>
+
+<footer><div class="wrap">
+<div class="foot-links">
+<a href="index.html">홈</a>
+<a href="about.html">소개</a>
+<a href="privacy.html">개인정보처리방침</a>
+<a href="contact.html">문의</a>
+</div>
+<div class="foot-notice">
+<b>이 사이트는 어떤 곳인가요?</b> 주식을 처음 시작하는 분들이 재무제표 숫자를 스스로 읽을 수 있도록 돕는 학습용 사이트입니다. 특정 종목의 매수·매도를 권유하지 않으며, 재무 수치는 각 사 실적 발표 자료를 바탕으로 정리했습니다. 실적은 매 분기 새로 발표되니 최신 수치는 전자공시시스템(DART)에서 다시 확인해 주세요.
+</div>
+<p>ⓒ 주린이 재무제표 · 투자 자문업 등록 업체가 아니며, 제공되는 모든 정보는 학습 참고 자료일 뿐 투자 권유가 아닙니다.</p>
+</div></footer>
+</body>
+</html>
