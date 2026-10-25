@@ -1,0 +1,21 @@
+# 대장주 리포트
+
+> 국내 증시 11개 테마별 대장주(대표 종목) 3개씩을 2026년 2분기 공시 기준 재무 요약(매출액·영업이익·영업이익률)과 네이버 증권 시세 링크로 정리한 정보 사이트. 투자 권유가 아니며 수치는 분기마다 갱신됩니다.
+
+## 테마별 페이지
+- [AI 소프트웨어·플랫폼 대장주](https://stock-leader-site.vercel.app/sectors/aisoft.html): 네이버, 카카오, 삼성SDS — 정부 AI 투자 확대와 맞물려 국내 소프트웨어·플랫폼 기업의 AI 전환이 주목받는 테마
+- [2차전지 대장주](https://stock-leader-site.vercel.app/sectors/battery.html): LG에너지솔루션, 삼성SDI, 포스코퓨처엠 — 전기차 캐즘을 지나 ESS(에너지저장장치) 수요가 새로운 성장축으로 떠오른 테마
+- [바이오 대장주](https://stock-leader-site.vercel.app/sectors/bio.html): 삼성바이오로직스, 셀트리온, SK바이오팜 — 위탁생산(CDMO) 경쟁력과 신약 파이프라인 기대감이 함께 움직이는 테마
+- [방산 대장주](https://stock-leader-site.vercel.app/sectors/defense.html): 한화에어로스페이스, 현대로템, LIG디펜스앤에어로스페이스 — 지정학적 리스크 고착화와 수출 확대로 실적과 주가 모두 견조한 흐름을 보인 테마
+- [엔터테인먼트 대장주](https://stock-leader-site.vercel.app/sectors/enter.html): 하이브, 에스엠(SM), JYP Ent. — K-팝의 글로벌 확장과 아티스트 컴백·투어 일정에 따라 움직이는 테마
+- [게임 대장주](https://stock-leader-site.vercel.app/sectors/game.html): 크래프톤, 엔씨소프트, 넷마블 — 신작 흥행 여부에 따라 주가 변동성이 큰, 콘텐츠 IP 중심의 테마
+- [원전·전력인프라 대장주](https://stock-leader-site.vercel.app/sectors/power.html): 두산에너빌리티, LS일렉트릭, 효성중공업 — AI 데이터센터발 전력 수요 폭증과 원전 생태계 정상화가 맞물린 테마
+- [로봇 대장주](https://stock-leader-site.vercel.app/sectors/robot.html): 레인보우로보틱스, 두산로보틱스, 로보티즈 — 휴머노이드와 산업 자동화(피지컬 AI) 기대감으로 빠르게 부상한 신흥 테마
+- [AI 반도체 대장주](https://stock-leader-site.vercel.app/sectors/semi.html): 삼성전자, SK하이닉스, 한미반도체 — AI 데이터센터 확대와 HBM 수요 증가로 최근 몇 년간 가장 주목받은 테마
+- [조선 대장주](https://stock-leader-site.vercel.app/sectors/ship.html): HD현대중공업, 한화오션, HD현대미포 — LNG선·해양플랜트 수주 호조와 함께 다년간 이어진 수퍼사이클의 중심 테마
+- [우주항공 대장주](https://stock-leader-site.vercel.app/sectors/space.html): 한국항공우주(KAI), 한화에어로스페이스, 인텔리안테크 — 우주항공청 출범 이후 민간 주도 우주개발이 본격화되며 새롭게 조명받는 테마
+
+## 기타
+- [소개](https://stock-leader-site.vercel.app/about.html)
+- [개인정보처리방침](https://stock-leader-site.vercel.app/privacy.html)
+- [문의](https://stock-leader-site.vercel.app/contact.html)

@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://DOMAIN/sitemap.xml
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://stock-leader-site.vercel.app/sitemap.xml

@@ -195,3 +195,13 @@ footer .foot-notice{
 footer .foot-notice b{color:var(--ink);}
 footer .foot-links{display:flex; gap:16px; margin-bottom:14px; font-family:'IBM Plex Mono',monospace; font-size:12px;}
 footer .foot-links a:hover{color:var(--gold);}
+
+/* ===== GEO answer box / bottom ad ===== */
+.answer-box{background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--blue); border-radius:3px; padding:18px 20px; margin-bottom:34px; font-size:14.5px; color:var(--ink-soft); max-width:760px;}
+.answer-box b{color:var(--ink);}
+.faq-item{border-bottom:1px solid var(--line-soft); padding:14px 0;}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{font-family:'Noto Serif KR',serif; font-weight:700; font-size:15px; margin-bottom:6px;}
+.faq-a{font-size:13.5px; color:var(--ink-soft);}
+.ad-bottom{border-top:1px solid var(--line); padding:20px 0 4px; text-align:left;}
+.ad-bottom .ad-label{display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-faint); margin-bottom:6px; text-align:left;}
